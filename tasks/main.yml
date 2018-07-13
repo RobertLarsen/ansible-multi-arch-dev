@@ -1,2 +1,25 @@
 ---
-# tasks file for RobertLarsen.multi-arch-dev
+- name: Install packages
+  become: true
+  apt:
+      name: "{{item}}"
+  with_items:
+  - cmake
+  - qemu
+  - binfmt-support
+  - qemu-user-static
+
+- name: Directory for qemu binfmt links
+  become: true
+  file:
+      path: /etc/qemu-binfmt
+      state: directory
+
+- name: Install for ARM development
+  include_tasks: arm.yml
+
+- name: Install for MIPS development
+  include_tasks: mips.yml
+
+- name: Install for Windows development
+  include_tasks: mingw.yml

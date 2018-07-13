@@ -1,0 +1,5 @@
+---
+- name: Install mingw compiler toolchain
+  become: true
+  apt:
+      name: gcc-mingw-w64-i686

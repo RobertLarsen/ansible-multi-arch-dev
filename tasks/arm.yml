@@ -1,0 +1,15 @@
+---
+- name: Install ARM compiler toolchain
+  become: true
+  apt:
+      name: "{{item}}"
+  with_items:
+  - gcc-arm-linux-gnueabi
+  - binutils-arm-linux-gnueabi
+
+- name: Let qemu know where the ARM root is
+  become: true
+  file:
+      dest: /etc/qemu-binfmt/arm
+      src: /usr/arm-linux-gnueabi
+      state: link
