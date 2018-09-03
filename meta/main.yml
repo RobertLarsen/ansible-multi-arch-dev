@@ -9,6 +9,5 @@ galaxy_info:
     versions:
     - yakkety
   galaxy_tags:
-      - cross-compilation
-      - software-development
+      - development
 dependencies: []
