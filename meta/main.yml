@@ -1,7 +1,7 @@
 galaxy_info:
   author: Robert Larsen <robert@the-playground.dk>
   description: Configures Ubuntu for multi architecture development
-  company:
+  company: None
   license: GPLv2
   min_ansible_version: 1.2
   platforms:
