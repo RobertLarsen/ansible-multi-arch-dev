@@ -2,10 +2,9 @@
 - name: Install MIPS compiler toolchain
   become: true
   apt:
-      name: "{{item}}"
-  with_items:
-  - gcc-mips-linux-gnu
-  - binutils-mips-linux-gnu
+      name:
+      - gcc-mips-linux-gnu
+      - binutils-mips-linux-gnu
 
 - name: Let qemu know where the MIPS root is
   become: true

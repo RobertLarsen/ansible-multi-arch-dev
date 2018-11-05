@@ -2,12 +2,11 @@
 - name: Install packages
   become: true
   apt:
-      name: "{{item}}"
-  with_items:
-  - cmake
-  - qemu
-  - binfmt-support
-  - qemu-user-static
+      name:
+      - cmake
+      - qemu
+      - binfmt-support
+      - qemu-user-static
 
 - name: Directory for qemu binfmt links
   become: true
