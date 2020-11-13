@@ -5,10 +5,18 @@
       name:
       - gcc-mips-linux-gnu
       - binutils-mips-linux-gnu
-
+      - gcc-mipsel-linux-gnu
+      - binutils-mipsel-linux-gnu
 - name: Let qemu know where the MIPS root is
   become: true
   file:
       dest: /etc/qemu-binfmt/mips
       src: /usr/mips-linux-gnu
+      state: link
+
+- name: Let qemu know where the MIPSEL root is
+  become: true
+  file:
+      dest: /etc/qemu-binfmt/mipsel
+      src: /usr/mipsel-linux-gnu
       state: link
