@@ -7,6 +7,8 @@
       - qemu
       - binfmt-support
       - qemu-user-static
+      - qemu-user-binfmt
+      - qemu-system
 
 - name: Directory for qemu binfmt links
   become: true
