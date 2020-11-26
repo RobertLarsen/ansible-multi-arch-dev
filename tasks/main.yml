@@ -1,10 +1,10 @@
 ---
-- name: Install packages
+- name: Install multidev packages
   become: true
   apt:
       name:
       - cmake
-      - qemu
+      - gdb-multiarch
       - binfmt-support
       - qemu-user-static
       - qemu-user-binfmt
